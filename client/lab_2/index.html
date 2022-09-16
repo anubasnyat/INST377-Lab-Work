@@ -1,13 +1,3 @@
-Replace this with your complete HTML from Lab 1
-
-Hook it up to CSS by including style.css in the <head> tag
-
-Then add CSS class names to your HTML to make it look like the lab pictures.
-For example: <div class="selector">
-
-You should not need to edit the CSS to do this, only the HTML.
-
-Don't forget to add an actual set of image descriptions to your image carousel.
 
 <html lang="en">
 <head>
@@ -18,62 +8,60 @@ Don't forget to add an actual set of image descriptions to your image carousel.
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <div>
-  <header><h1> Anusha's Labs for INST377 </h1></header>
-  <div>
-    <div>
-      <h2>Album Names </h2>
-      <ol>
-        <li>Un Verano Sin Ti</li>
-        <li>Eternal Atake</li>
-        <li>Honestly, Nevermind</li>
-        <li>Harry's House</li>
-        <li>Come Home the Kids Miss You</li>
-      </ol>
+    <div class="wrapper">
+        <!--wrapper-->
+        <header class="header"><h1> Anusha's Labs for INST377 </h1></header>
+        <div class="container">
+            <!--container-->
+            <div class="left_section box">
+                <!--left inputs-->
+            <h2>Album Names </h2>
+            <ol class="box">
+                <li>Un Verano Sin Ti- Party </li>
+                <li>Eternal Atake- That Way </li>
+                <li>Honestly, Nevermind- Texts Go Green </li>
+                <li>Harry's House- Late Night Talking </li>
+                <li>Come Home the Kids Miss You- First Class </li>
+            </ol>
     </div>
-
-    <div>
+    <div class="right_section box"> <!--right side-->
       <h2>Image Carousel</h2>
-    </div>
+    <div class="grid img"> <!--images box-->
+        <head>
+            <!-- In GIFs section -->
+            <img src='images/mochi.gif'/>
+            
+            <!-- In JPGs section -->
+            <img src='images/mochi.jpg'/>
+            
+            
+            <!-- In PNGs section -->
+            <img src='images/mochi.png'/>
+            
+            <!-- In SVGs section -->
+            <img src='images/mochi.svg'/>
+            
+            <head> 
+            
   </div>
-<head>
-<!-- In GIFs section -->
-<img src='images/mochi.gif' width='150'/>
+    <div class="box">
+        <ol>
+            <!--description box-->
+                <li>The first rice ball is bouncing up and down happy </li>
+                <li>The second rice ball is happy while in a bubble</li>
+                <li>The third rice ball is happy and content</li>
+                <li>The last rice ball is covered around but still happy</li> 
+        </ol>
 
-<!-- In JPGs section -->
-<img src='images/mochi.jpg' width='150'/>
-
-
-<!-- In PNGs section -->
-<img src='images/mochi.png' width='150'/>
-
-<!-- In SVGs section -->
-<img src='images/mochi.svg' width='75'/>
-
-<head> 
-
-    <div>
-      A) The first image is a gif that produces a gif which produces an animated image. 
+            </div>
+        </div>
     </div>
-
-    <div>
-      B) The second image is a jpg that is often used for photos
-    </div>
-  
-    <div>
-      C) The third image is a png which is used for diagrams or icons
-  
-    </div>
-    
-    <div>
-      D) The last image is a svg which can be used whenever! 
-
-    </div>
-
-</div> <a href="https://github.com/anubasnyat" target="blank" rel="noopener noreferrer">INST377-Lab-Work</a>
-<div></div>
-
 </div>
+<footer class="footer">
+    YOUR GITHUB ACCOUNT NAME <a href="https://github.com/anubasnyat" target="blank" rel="noopener noreferrer">INST377-Lab-Work</a>
+</footer>
+</body>
+</html>
 
-</head>
+
 
