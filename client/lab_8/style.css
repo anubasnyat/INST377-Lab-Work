@@ -256,17 +256,6 @@
     border: 2px solid rgb(99, 99, 99); /* shorthand for how to do a border */
   }
   
-  .prev:focus,
-  .next:focus {
-    margin: 0;
-    /* Pick a good border colour and check out how it works with your buttons */
-  }
-  
-  .prev:hover,
-  .next:hover {
-    /* Pick a good background colour for your hover pseudoclass */
-  }
-  
   /*
   Form Styles
   */
@@ -307,7 +296,29 @@
       align-items: center;
     }
   }
+  .prev:focus,
+  .next:focus {
+    margin: 0;
+    /* Pick a good border colour and check out how it works with your buttons */
+    border: 2px solid rgba(114, 181, 207, 0.65);
+  }
   
+  .prev:hover,
+  .next:hover {
+    background-color: aqua;
+    /* Pick a good background colour for your hover pseudoclass */
+  }
+  
+  /* MAP Styles */ 
+  
+  #map {
+    display: block;
+    width: 400px;
+    height: 300px;
+    border: 2px dashed rgb(99, 99, 99);
+    margin-bottom: 1rem;
+  }
+
   
   /* 
       New code bonus: pure CSS data loading icon
