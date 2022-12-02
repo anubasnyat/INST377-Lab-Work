@@ -107,6 +107,37 @@ function markerPlace(array, map) {
   });
 }
 
+function initChart() {
+  const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June'
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'My First dataset',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 5, 2, 20, 30, 45]
+    }]
+  };
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {}
+  };
+  return new Chart(
+    chart,
+    config
+  );
+}
+
 async function mainEvent() {
   /*
         ## Main Event
@@ -120,16 +151,15 @@ async function mainEvent() {
   const form = document.querySelector('.main_form'); // get your main form so you can do JS with it
   const submit = document.querySelector('#get-resto'); // get a reference to your submit button
   const loadAnimation = document.querySelector('.lds-ellipsis'); // get a reference to our loading animation
+  const restoName = document.querySelector('#resto');
+  const chartTarget = document.querySelector('#myChart');
   submit.style.display = 'none'; // let your submit button disappear
 
-  /*
-        Let's get some data from the API - it will take a second or two to load
-        This next line goes to the request for 'GET' in the file at /server/routes/foodServiceRoutes.js
-        It's at about line 27 - go have a look and see what we're retrieving and sending back.
-       */
+  /* API Data Request   */
   const results = await fetch('/api/foodServicePG');
   const arrayFromJson = await results.json(); // here is where we get the data from our request as JSON
 
+  initChart(chartTarget);
   /*
         Below this comment, we log out a table of all the results using "dot notation"
         An alternate notation would be "bracket notation" - arrayFromJson["data"]
